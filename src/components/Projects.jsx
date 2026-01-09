@@ -76,7 +76,7 @@ export default function Projects({ projects }) {
                     alt={project.title || project.name}
                     className="w-full h-full"
                     cmsBind={{
-                      file: 'tabel',
+                      file: 'projects',
                       index: project.absoluteIndex,
                       key: 'image_url'
                     }}
