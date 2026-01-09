@@ -27,7 +27,7 @@ const ProjectModal = ({ project, onClose, onInquire }) => {
             <span className="text-blue-600 font-bold uppercase tracking-widest text-xs mb-2 block">
               {project.category}
             </span>
-            <h2 className="text-4xl font-bold text-gray-900">{project.title}</h2>
+            <h2 className="text-4xl font-bold text-gray-900">{project.title || project.name}</h2>
           </div>
 
           <div className="grid md:grid-cols-2 gap-12">
@@ -35,12 +35,12 @@ const ProjectModal = ({ project, onClose, onInquire }) => {
                <div className="aspect-video bg-gray-100 rounded-xl overflow-hidden mb-6">
                  <img 
                     src={project.image_url || `https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000&auto=format&fit=crop`} 
-                    alt={project.title}
+                    alt={project.title || project.name}
                     className="w-full h-full object-cover"
                  />
                </div>
                <div className="flex flex-wrap gap-2">
-                  {(project.tech_stack || "").split(',').map((tech, i) => (
+                  {(project.tech_stack || project.type || "Web App").split(',').map((tech, i) => (
                     <span key={i} className="text-xs font-medium text-gray-600 bg-gray-100 px-3 py-1 rounded-full">
                       {tech.trim()}
                     </span>
@@ -51,14 +51,14 @@ const ProjectModal = ({ project, onClose, onInquire }) => {
             <div className="flex flex-col">
               <h4 className="font-bold text-gray-900 mb-4">Project Description</h4>
               <p className="text-gray-600 leading-relaxed mb-8">
-                {project.description || project.summary}
+                {project.description || project.summary || "No description available."}
               </p>
 
               <div className="mt-auto pt-8 border-t border-gray-100 space-y-4">
                 <div className="flex flex-wrap gap-4">
-                  {project.repo_url && (
+                  {(project.repo_url || project.githubLink) && (
                     <a 
-                      href={project.repo_url.startsWith('http') ? project.repo_url : `https://${project.repo_url}`}
+                      href={(project.repo_url || project.githubLink).startsWith('http') ? (project.repo_url || project.githubLink) : `https://${(project.repo_url || project.githubLink)}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex-1 text-center py-3 bg-gray-900 text-white font-bold rounded-lg hover:bg-gray-800 transition-all"
@@ -66,9 +66,9 @@ const ProjectModal = ({ project, onClose, onInquire }) => {
                       GitHub Repo
                     </a>
                   )}
-                  {project.demo_url && (
+                  {(project.demo_url || project.liveLink) && (
                     <a 
-                      href={project.demo_url.startsWith('http') ? project.demo_url : `https://${project.demo_url}`}
+                      href={(project.demo_url || project.liveLink).startsWith('http') ? (project.demo_url || project.liveLink) : `https://${(project.demo_url || project.liveLink)}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex-1 text-center py-3 border border-gray-200 text-gray-900 font-bold rounded-lg hover:bg-gray-50 transition-all"

@@ -11,7 +11,7 @@ const App = ({ data }) => {
   if (!data) return <div className="p-20 text-center">Loading...</div>;
 
   const profile = data['Profile']?.[0] || data['Basisgegevens']?.[0] || {};
-  const projects = data['Projects'] || data['Portfolio'] || [];
+  const projects = data['Tabel'] || data['Projects'] || data['Portfolio'] || [];
   const services = data['Services'] || [];
   const testimonials = data['Testimonials'] || [];
 

@@ -9,17 +9,20 @@ export default function Projects({ projects }) {
 
   if (!projects || projects.length === 0) return null;
 
-  const categories = ['All', ...new Set(projects.map(p => p.category))];
+  // Ondersteun zowel 'category' als 'type' velden
+  const categories = ['All', ...new Set(projects.map(p => p.category || p.type || 'Development'))];
+  
   const filteredProjects = filter === 'All' 
     ? projects 
-    : projects.filter(p => p.category === filter);
+    : projects.filter(p => (p.category || p.type || 'Development') === filter);
 
   const handleInquire = (project) => {
     const item = {
-      id: project.id || project.title.toLowerCase().replace(/\s+/g, '-'),
-      name: project.title,
+      id: project.id || (project.title || project.name).toLowerCase().replace(/\s+/g, '-'),
+      name: project.title || project.name,
       price: 0,
       image: project.image_url,
+      category: project.category || project.type || 'Development',
       ...project
     };
     addToCart(item);
@@ -62,34 +65,29 @@ export default function Projects({ projects }) {
               <div className="aspect-video bg-gray-200 w-full overflow-hidden relative">
                  <img 
                     src={project.image_url || `https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000&auto=format&fit=crop`} 
-                    alt={project.title}
+                    alt={project.title || project.name}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                  />
                  <div className="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-gray-800 shadow-sm">
-                   {project.category}
+                   {project.category || project.type || 'Development'}
                  </div>
                  <div className="absolute inset-0 bg-blue-600/0 group-hover:bg-blue-600/10 transition-colors" />
               </div>
 
               <div className="p-8">
-                <h3 className="text-2xl font-bold mb-3 group-hover:text-blue-600 transition-colors">
-                  {project.title}
+                <h3 className="text-2xl font-bold mb-3 group-hover:text-blue-600 transition-colors text-gray-900">
+                  {project.title || project.name}
                 </h3>
                 <p className="text-gray-600 mb-6 leading-relaxed line-clamp-2">
-                  {project.summary}
+                  {project.description || project.summary || "No description available."}
                 </p>
                 
                 <div className="flex flex-wrap gap-2 mb-8">
-                  {project.tech_stack && project.tech_stack.split(',').slice(0, 4).map((tech, i) => (
+                  {(project.tech_stack || project.type || "Web App").split(',').slice(0, 4).map((tech, i) => (
                     <span key={i} className="text-[10px] font-bold text-gray-500 bg-gray-100 px-2 py-1 rounded uppercase tracking-wider">
                       {tech.trim()}
                     </span>
                   ))}
-                  {project.tech_stack && project.tech_stack.split(',').length > 4 && (
-                    <span className="text-[10px] font-bold text-gray-400 px-2 py-1 italic">
-                      +{project.tech_stack.split(',').length - 4} more
-                    </span>
-                  )}
                 </div>
 
                 <div className="flex items-center text-blue-600 font-bold text-sm">
