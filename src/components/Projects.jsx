@@ -61,16 +61,18 @@ export default function Projects({ projects }) {
             <article 
               key={index} 
               className="group relative bg-white rounded-2xl overflow-hidden border border-gray-200 hover:border-blue-200 hover:shadow-xl transition-all cursor-pointer"
-              onClick={() => setSelectedProject(project)}
+              onClick={() => setSelectedProject({ ...project, index })}
             >
               <div className="aspect-video bg-gray-200 w-full overflow-hidden relative">
                  <EditableImage 
                     src={project.image_url || `https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000&auto=format&fit=crop`} 
                     alt={project.title || project.name}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    dataKey="Tabel"
-                    id={project.name || project.title}
-                    field="image_url"
+                    className="w-full h-full"
+                    cmsBind={{
+                      file: 'tabel',
+                      index: index,
+                      key: 'image_url'
+                    }}
                  />
                  <div className="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-gray-800 shadow-sm">
                    {project.category || project.type || 'Development'}

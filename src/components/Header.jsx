@@ -7,7 +7,19 @@ export default function Header({ profile = {} }) {
   return (
     <header className="bg-white border-b border-gray-100 sticky top-0 z-[100]">
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-        <div className="flex items-center gap-8">
+        <div className="flex items-center gap-6">
+          <div className="w-8 h-8 rounded-full overflow-hidden border border-gray-200">
+            <EditableImage 
+              src={profile.profile_image || 'https://via.placeholder.com/100'} 
+              alt={profile.full_name}
+              className="w-full h-full"
+              cmsBind={{
+                file: 'profile',
+                index: 0,
+                key: 'profile_image'
+              }}
+            />
+          </div>
           <h1 className="text-xl font-bold text-gray-900 tracking-tight">
             {profile.full_name || 'Karel Portfolio'}
           </h1>
