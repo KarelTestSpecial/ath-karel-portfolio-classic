@@ -68,7 +68,7 @@ export default function Projects({ projects }) {
             <article 
               key={index} 
               className="group relative bg-white rounded-2xl overflow-hidden border border-gray-200 hover:border-blue-200 hover:shadow-xl transition-all cursor-pointer"
-              onClick={() => setSelectedProject({ ...project, index })}
+              onClick={() => setSelectedProject(project)}
             >
               <div className="aspect-video bg-gray-200 w-full overflow-hidden relative">
                  <EditableImage 
@@ -77,7 +77,7 @@ export default function Projects({ projects }) {
                     className="w-full h-full"
                     cmsBind={{
                       file: 'tabel',
-                      index: index,
+                      index: project.absoluteIndex,
                       key: 'image_url'
                     }}
                  />

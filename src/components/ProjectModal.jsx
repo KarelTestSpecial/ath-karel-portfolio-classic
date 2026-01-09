@@ -47,7 +47,7 @@ const ProjectModal = ({ project, onClose, onInquire }) => {
                     className="w-full h-full"
                     cmsBind={{
                       file: 'tabel',
-                      index: project.index !== undefined ? project.index : 0,
+                      index: project.absoluteIndex,
                       key: 'image_url'
                     }}
                  />
