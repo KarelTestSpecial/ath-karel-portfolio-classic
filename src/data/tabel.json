@@ -42,7 +42,7 @@
     "liveLink": "https://chromewebstore.google.com/detail/notebooklm-source-uploade/cflibmhmbbbnkjhobikinkkabplcijdj",
     "status": "active",
     "description": "Automates adding multiple website or YouTube links to Google NotebookLM.",
-    "image_url": "icon128.png"
+    "image_url": "nblm-upl-icon128.png"
   },
   {
     "type": "chrome",
@@ -68,7 +68,8 @@
     "githubLink": "https://github.com/KarelTestSpecial/link-in-bio-hub-repo",
     "liveLink": "https://linkinbiohub.web.app",
     "status": "inactive",
-    "description": "Een met Firebase gebouwde mobile first webapplicatie voor het centraliseren van social media links."
+    "description": "Een met Firebase gebouwde mobile first webapplicatie voor het centraliseren van social media links.",
+    "image_url": "download-2025-08-30T221806.591.jpeg"
   },
   {
     "type": "github",
@@ -85,7 +86,8 @@
     "githubLink": "https://github.com/KarelTestSpecial/youtube-collector-sheets",
     "liveLink": "",
     "status": "",
-    "description": "Downloads all the video-links of each and everyone of your YouTube playlists into a Google Sheet by the means of the official YouTube/Google API's."
+    "description": "Downloads all the video-links of each and everyone of your YouTube playlists into a Google Sheet by the means of the official YouTube/Google API's.",
+    "image_url": "rubbduck-whiteSquare_blackTxt.png"
   },
   {
     "type": "github",
