@@ -81,10 +81,10 @@ export default function Projects({ projects }) {
                       key: 'image_url'
                     }}
                  />
-                 <div className="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-gray-800 shadow-sm">
+                 <div className="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-gray-800 shadow-sm pointer-events-none">
                    {project.category || project.type || 'Development'}
                  </div>
-                 <div className="absolute inset-0 bg-blue-600/0 group-hover:bg-blue-600/10 transition-colors" />
+                 <div className="absolute inset-0 bg-blue-600/0 group-hover:bg-blue-600/10 transition-colors pointer-events-none" />
               </div>
 
               <div className="p-8">

@@ -14,7 +14,8 @@
     "githubLink": "https://github.com/KarelTestSpecial/battery-percentage",
     "liveLink": "https://chromewebstore.google.com/detail/bcknfhofonlfillmlonppglflhgdbeoa",
     "status": "active",
-    "description": "Displays the battery percentage in digital form on the toolbar or its own floating window, and sends smart notifications."
+    "description": "Displays the battery percentage in digital form on the toolbar or its own floating window, and sends smart notifications.",
+    "image_url": "Batterypercentage440x280.png"
   },
   {
     "type": "chrome",
@@ -22,7 +23,8 @@
     "githubLink": "https://github.com/KarelTestSpecial/clock",
     "liveLink": "https://chromewebstore.google.com/detail/very-practical-clock/ncooonkkjoeikgkbbljefnmhldpgdpdn",
     "status": "active",
-    "description": "A customizable digital clock that always stays on top"
+    "description": "A customizable digital clock that always stays on top",
+    "image_url": "clock_icon128x128.png"
   },
   {
     "type": "chrome",
@@ -30,7 +32,8 @@
     "githubLink": "https://github.com/KarelTestSpecial/aistudioreader",
     "liveLink": "https://chromewebstore.google.com/detail/google-ai-studio-file-rea/holadmfpcclmpmkdkmcanifihneflfop",
     "status": "active",
-    "description": "Converts Google AI Studio File into an easy-to-read text file"
+    "description": "Converts Google AI Studio File into an easy-to-read text file",
+    "image_url": "aistudioreader.jpg"
   },
   {
     "type": "chrome",
@@ -38,7 +41,8 @@
     "githubLink": "https://github.com/KarelTestSpecial/notebooklm-source-loader",
     "liveLink": "https://chromewebstore.google.com/detail/notebooklm-source-uploade/cflibmhmbbbnkjhobikinkkabplcijdj",
     "status": "active",
-    "description": "Automates adding multiple website or YouTube links to Google NotebookLM."
+    "description": "Automates adding multiple website or YouTube links to Google NotebookLM.",
+    "image_url": "icon128.png"
   },
   {
     "type": "chrome",
@@ -46,7 +50,8 @@
     "githubLink": "https://github.com/KarelTestSpecial/youtube-collector-csv",
     "liveLink": "https://chromewebstore.google.com/detail/youtube-playlist-collecto/noadbldckkkcfkhghjehpdldgppbggde",
     "status": "active",
-    "description": "Collects video links from the current YouTube playlist tab and exports them to a downloadable CSV file."
+    "description": "Collects video links from the current YouTube playlist tab and exports them to a downloadable CSV file.",
+    "image_url": "icon-YTcsv-128x128.png"
   },
   {
     "type": "chrome",
@@ -54,7 +59,8 @@
     "githubLink": "https://github.com/KarelTestSpecial/youtube-rightclick-csv",
     "liveLink": "https://chromewebstore.google.com/detail/youtube-rightclick/dceebkineaajkfponfimilfebkgbcchh",
     "status": "active",
-    "description": "Easily add YouTube video URLs to a CSV list via right-click or toolbar button. Quick capture for content curators & researchers."
+    "description": "Easily add YouTube video URLs to a CSV list via right-click or toolbar button. Quick capture for content curators & researchers.",
+    "image_url": "rightclick-440x280-9.png"
   },
   {
     "type": "github",
@@ -70,7 +76,8 @@
     "githubLink": "https://github.com/KarelTestSpecial/youtube-2way-collector",
     "liveLink": "",
     "status": "",
-    "description": "Collect videos from YouTube playlists and save them to a Google Sheet. Edit / Re-arrange your playlists in the Google Sheet and save the changes back to YouTube."
+    "description": "Collect videos from YouTube playlists and save them to a Google Sheet. Edit / Re-arrange your playlists in the Google Sheet and save the changes back to YouTube.",
+    "image_url": "icon128.png"
   },
   {
     "type": "github",
@@ -166,7 +173,8 @@
     "githubLink": "https://github.com/KarelTestSpecial/LFH/",
     "liveLink": "https://kareltestspecial.github.io/LFH/index.html",
     "status": "active",
-    "description": "Een datatree over Longevity, Health & Food."
+    "description": "Een datatree over Longevity, Health & Food.",
+    "image_url": "LFH-datatree-0.png"
   },
   {
     "type": "github",
@@ -182,7 +190,8 @@
     "githubLink": "https://github.com/KarelTestSpecial/Vegan-BioTech-Report",
     "liveLink": "https://kareltestspecial.github.io/Vegan-BioTech-Report/",
     "status": "active",
-    "description": "Een geautomatiseerde nieuwsbrief en longread website die met AI data verzamelt en presenteert, draaiend op GitHub Actions."
+    "description": "Een geautomatiseerde nieuwsbrief en longread website die met AI data verzamelt en presenteert, draaiend op GitHub Actions.",
+    "image_url": "VBT_home_hero.png"
   },
   {
     "type": "website",
@@ -190,7 +199,8 @@
     "githubLink": "",
     "liveLink": "https://autiwiki.netlify.app/",
     "status": "active",
-    "description": "Een wiki over autisme."
+    "description": "Een wiki over autisme.",
+    "image_url": "AutiWiki-0.png"
   },
   {
     "type": "website",
@@ -198,7 +208,8 @@
     "githubLink": "https://github.com/KarelTestSpecial/manus-lfh",
     "liveLink": "https://kareltestspecial.github.io/manus-lfh/#/",
     "status": "active",
-    "description": "L&H door Manus.im (afgewerkt met Gemini 3.0 en Jules 2.0)"
+    "description": "L&H door Manus.im (afgewerkt met Gemini 3.0 en Jules 2.0)",
+    "image_url": "Manus-lfh-0.png"
   },
   {
     "type": "website",
@@ -206,7 +217,8 @@
     "githubLink": "https://github.com/KarelTestSpecial/portfolio-vite-1",
     "liveLink": "https://kareltestspecial.github.io/portfolio-vite-1/",
     "status": "active",
-    "description": "Mijn portfolio website gebouwd met Vite."
+    "description": "Mijn portfolio website gebouwd met Vite.",
+    "image_url": "kdc-Vite-portfolio.png"
   },
   {
     "type": "website",
@@ -214,6 +226,7 @@
     "githubLink": "",
     "liveLink": "https://kareltestspecial.github.io/jitske-knipt/",
     "status": "active",
-    "description": "Mijn athena cms factory software bouwt automatisch sites zoals deze mock-up site"
+    "description": "Mijn athena cms factory software bouwt automatisch sites zoals deze mock-up site",
+    "image_url": "Athena-logo-0.png"
   }
 ]
