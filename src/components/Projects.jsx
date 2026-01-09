@@ -1,68 +1,111 @@
-import React from 'react';
+import React, { useState } from 'react';
+import ProjectModal from './ProjectModal';
+import { useCart } from './CartContext';
 
 export default function Projects({ projects }) {
+  const [selectedProject, setSelectedProject] = useState(null);
+  const [filter, setFilter] = useState('All');
+  const { addToCart } = useCart();
+
   if (!projects || projects.length === 0) return null;
+
+  const categories = ['All', ...new Set(projects.map(p => p.category))];
+  const filteredProjects = filter === 'All' 
+    ? projects 
+    : projects.filter(p => p.category === filter);
+
+  const handleInquire = (project) => {
+    const item = {
+      id: project.id || project.title.toLowerCase().replace(/\s+/g, '-'),
+      name: project.title,
+      price: 0,
+      image: project.image_url,
+      ...project
+    };
+    addToCart(item);
+    setSelectedProject(null);
+  };
 
   return (
     <section id="projects" className="py-24 bg-white">
       <div className="container mx-auto px-6">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-12">
+        <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
           <div>
-            <h2 className="text-4xl font-bold text-gray-900 mb-2">Featured Projects</h2>
-            <p className="text-gray-500">A selection of my recent work.</p>
+            <h2 className="text-4xl font-bold text-gray-900 mb-2">Portfolio Work</h2>
+            <p className="text-gray-500">Explore my technical solutions and creative builds.</p>
           </div>
-          <button className="hidden md:block text-blue-600 font-medium hover:underline">
-            View All &rarr;
-          </button>
+          
+          <div className="flex flex-wrap gap-2">
+            {categories.map(cat => (
+              <button
+                key={cat}
+                onClick={() => setFilter(cat)}
+                className={`px-4 py-1.5 rounded-full text-xs font-bold transition-all ${
+                  filter === cat 
+                    ? 'bg-blue-600 text-white shadow-md' 
+                    : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                }`}
+              >
+                {cat}
+              </button>
+            ))}
+          </div>
         </div>
 
         <div className="grid md:grid-cols-2 gap-10">
-          {projects.map((project, index) => (
-            <article key={index} className="group relative bg-white rounded-2xl overflow-hidden border border-gray-200 hover:border-gray-300 transition-colors">
-              {/* Image Placeholder */}
+          {filteredProjects.map((project, index) => (
+            <article 
+              key={index} 
+              className="group relative bg-white rounded-2xl overflow-hidden border border-gray-200 hover:border-blue-200 hover:shadow-xl transition-all cursor-pointer"
+              onClick={() => setSelectedProject(project)}
+            >
               <div className="aspect-video bg-gray-200 w-full overflow-hidden relative">
-                 {/* In a real app, this would be an <img> tag */}
-                 <div className="absolute inset-0 flex items-center justify-center text-gray-400 bg-gray-100 group-hover:scale-105 transition-transform duration-500">
-                    <span className="text-sm font-mono">{project.image_prompt ? "AI Image" : "Project Preview"}</span>
-                 </div>
+                 <img 
+                    src={project.image_url || `https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000&auto=format&fit=crop`} 
+                    alt={project.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                 />
                  <div className="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-gray-800 shadow-sm">
                    {project.category}
                  </div>
+                 <div className="absolute inset-0 bg-blue-600/0 group-hover:bg-blue-600/10 transition-colors" />
               </div>
 
               <div className="p-8">
                 <h3 className="text-2xl font-bold mb-3 group-hover:text-blue-600 transition-colors">
                   {project.title}
                 </h3>
-                <p className="text-gray-600 mb-6 leading-relaxed">
+                <p className="text-gray-600 mb-6 leading-relaxed line-clamp-2">
                   {project.summary}
                 </p>
                 
                 <div className="flex flex-wrap gap-2 mb-8">
-                  {project.tech_stack && project.tech_stack.split(',').map((tech, i) => (
-                    <span key={i} className="text-xs font-medium text-gray-500 bg-gray-100 px-2 py-1 rounded">
+                  {project.tech_stack && project.tech_stack.split(',').slice(0, 4).map((tech, i) => (
+                    <span key={i} className="text-[10px] font-bold text-gray-500 bg-gray-100 px-2 py-1 rounded uppercase tracking-wider">
                       {tech.trim()}
                     </span>
                   ))}
+                  {project.tech_stack && project.tech_stack.split(',').length > 4 && (
+                    <span className="text-[10px] font-bold text-gray-400 px-2 py-1 italic">
+                      +{project.tech_stack.split(',').length - 4} more
+                    </span>
+                  )}
                 </div>
 
-                <div className="flex gap-4">
-                  {project.demo_url && (
-                    <a href={project.demo_url} className="text-sm font-bold text-gray-900 border-b-2 border-transparent hover:border-black transition-all">
-                      Live Demo
-                    </a>
-                  )}
-                  {project.repo_url && (
-                    <a href={project.repo_url} className="text-sm font-bold text-gray-500 hover:text-gray-900">
-                      GitHub
-                    </a>
-                  )}
+                <div className="flex items-center text-blue-600 font-bold text-sm">
+                  View Details & Inquire <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
                 </div>
               </div>
             </article>
           ))}
         </div>
       </div>
+
+      <ProjectModal 
+        project={selectedProject} 
+        onClose={() => setSelectedProject(null)} 
+        onInquire={handleInquire}
+      />
     </section>
   );
 }
