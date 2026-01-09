@@ -5,7 +5,8 @@
     "githubLink": "https://github.com/KarelTestSpecial/new-tab-organizer",
     "liveLink": "https://chromewebstore.google.com/detail/new-tab-organizer/llhggelkoodddbgmnmfplcmchbbkkjpk",
     "status": "active",
-    "description": "A customizable startpage with your bookmarks and notes."
+    "description": "A customizable startpage with your bookmarks and notes.",
+    "image_url": "organizertab-1.png"
   },
   {
     "type": "chrome",

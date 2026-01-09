@@ -10,6 +10,13 @@ export default function Projects({ projects }) {
 
   if (!projects || projects.length === 0) return null;
 
+  // Helper voor slimme URL afhandeling
+  const getImageUrl = (url) => {
+    if (!url) return "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000&auto=format&fit=crop";
+    if (url.startsWith('http')) return url;
+    return `${import.meta.env.BASE_URL}images/${url}`;
+  };
+
   // Ondersteun zowel 'category' als 'type' velden
   const categories = ['All', ...new Set(projects.map(p => p.category || p.type || 'Development'))];
   
@@ -65,7 +72,7 @@ export default function Projects({ projects }) {
             >
               <div className="aspect-video bg-gray-200 w-full overflow-hidden relative">
                  <EditableImage 
-                    src={project.image_url || `https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000&auto=format&fit=crop`} 
+                    src={getImageUrl(project.image_url)} 
                     alt={project.title || project.name}
                     className="w-full h-full"
                     cmsBind={{

@@ -5,13 +5,20 @@ import EditableImage from './EditableImage';
 export default function Header({ profile = {} }) {
   const { cartCount, setIsCartOpen } = useCart();
 
+  // Helper voor slimme URL afhandeling
+  const getImageUrl = (url) => {
+    if (!url) return "https://via.placeholder.com/100";
+    if (url.startsWith('http')) return url;
+    return `${import.meta.env.BASE_URL}images/${url}`;
+  };
+
   return (
     <header className="bg-white border-b border-gray-100 sticky top-0 z-[100]">
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
         <div className="flex items-center gap-6">
           <div className="w-8 h-8 rounded-full overflow-hidden border border-gray-200">
             <EditableImage 
-              src={profile.profile_image || 'https://via.placeholder.com/100'} 
+              src={getImageUrl(profile.profile_image)} 
               alt={profile.full_name}
               className="w-full h-full"
               cmsBind={{
