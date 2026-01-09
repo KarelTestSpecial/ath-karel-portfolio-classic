@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import ProjectModal from './ProjectModal';
 import { useCart } from './CartContext';
+import EditableImage from './EditableImage';
 
 export default function Projects({ projects }) {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -63,10 +64,13 @@ export default function Projects({ projects }) {
               onClick={() => setSelectedProject(project)}
             >
               <div className="aspect-video bg-gray-200 w-full overflow-hidden relative">
-                 <img 
+                 <EditableImage 
                     src={project.image_url || `https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000&auto=format&fit=crop`} 
                     alt={project.title || project.name}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    dataKey="Tabel"
+                    id={project.name || project.title}
+                    field="image_url"
                  />
                  <div className="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-gray-800 shadow-sm">
                    {project.category || project.type || 'Development'}

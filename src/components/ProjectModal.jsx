@@ -1,4 +1,5 @@
 import React from 'react';
+import EditableImage from './EditableImage';
 
 const ProjectModal = ({ project, onClose, onInquire }) => {
   if (!project) return null;
@@ -25,7 +26,7 @@ const ProjectModal = ({ project, onClose, onInquire }) => {
         <div className="p-8 md:p-12">
           <div className="mb-8">
             <span className="text-blue-600 font-bold uppercase tracking-widest text-xs mb-2 block">
-              {project.category}
+              {project.category || project.type}
             </span>
             <h2 className="text-4xl font-bold text-gray-900">{project.title || project.name}</h2>
           </div>
@@ -33,10 +34,13 @@ const ProjectModal = ({ project, onClose, onInquire }) => {
           <div className="grid md:grid-cols-2 gap-12">
             <div>
                <div className="aspect-video bg-gray-100 rounded-xl overflow-hidden mb-6">
-                 <img 
+                 <EditableImage 
                     src={project.image_url || `https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000&auto=format&fit=crop`} 
                     alt={project.title || project.name}
                     className="w-full h-full object-cover"
+                    dataKey="Tabel"
+                    id={project.name || project.title}
+                    field="image_url"
                  />
                </div>
                <div className="flex flex-wrap gap-2">
