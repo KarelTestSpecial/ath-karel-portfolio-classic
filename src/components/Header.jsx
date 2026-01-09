@@ -1,5 +1,6 @@
 import React from 'react';
 import { useCart } from './CartContext';
+import EditableImage from './EditableImage';
 
 export default function Header({ profile = {} }) {
   const { cartCount, setIsCartOpen } = useCart();
