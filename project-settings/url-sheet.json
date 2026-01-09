@@ -1,22 +1,22 @@
 {
   "Profile": {
     "editUrl": "https://docs.google.com/spreadsheets/d/1yIAhmYk6GBy04NDqt2WRHVavrAg0UqGrDGD_mOUBFiA/edit#gid=654167287",
-    "exportUrl": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRjkI05iwnpbhoPlsB7sinHcQyyK0x-9yQ4oyLMv2k9KgRcQPmdSQ2elsGvjQS0VSBaXl0uUQO9ES8r/pub?output=tsv&gid=654167287"
+    "exportUrl": "https://docs.google.com/spreadsheets/d/1yIAhmYk6GBy04NDqt2WRHVavrAg0UqGrDGD_mOUBFiA/export?format=tsv&gid=654167287"
   },
   "Projects": {
     "editUrl": "https://docs.google.com/spreadsheets/d/1yIAhmYk6GBy04NDqt2WRHVavrAg0UqGrDGD_mOUBFiA/edit#gid=399920592",
-    "exportUrl": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRjkI05iwnpbhoPlsB7sinHcQyyK0x-9yQ4oyLMv2k9KgRcQPmdSQ2elsGvjQS0VSBaXl0uUQO9ES8r/pub?output=tsv&gid=399920592"
+    "exportUrl": "https://docs.google.com/spreadsheets/d/1yIAhmYk6GBy04NDqt2WRHVavrAg0UqGrDGD_mOUBFiA/export?format=tsv&gid=399920592"
   },
   "Services": {
     "editUrl": "https://docs.google.com/spreadsheets/d/1yIAhmYk6GBy04NDqt2WRHVavrAg0UqGrDGD_mOUBFiA/edit#gid=376554074",
-    "exportUrl": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRjkI05iwnpbhoPlsB7sinHcQyyK0x-9yQ4oyLMv2k9KgRcQPmdSQ2elsGvjQS0VSBaXl0uUQO9ES8r/pub?output=tsv&gid=376554074"
+    "exportUrl": "https://docs.google.com/spreadsheets/d/1yIAhmYk6GBy04NDqt2WRHVavrAg0UqGrDGD_mOUBFiA/export?format=tsv&gid=376554074"
   },
   "Socials": {
     "editUrl": "https://docs.google.com/spreadsheets/d/1yIAhmYk6GBy04NDqt2WRHVavrAg0UqGrDGD_mOUBFiA/edit#gid=1825727069",
-    "exportUrl": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRjkI05iwnpbhoPlsB7sinHcQyyK0x-9yQ4oyLMv2k9KgRcQPmdSQ2elsGvjQS0VSBaXl0uUQO9ES8r/pub?output=tsv&gid=1825727069"
+    "exportUrl": "https://docs.google.com/spreadsheets/d/1yIAhmYk6GBy04NDqt2WRHVavrAg0UqGrDGD_mOUBFiA/export?format=tsv&gid=1825727069"
   },
   "Testimonials": {
     "editUrl": "https://docs.google.com/spreadsheets/d/1yIAhmYk6GBy04NDqt2WRHVavrAg0UqGrDGD_mOUBFiA/edit#gid=794795080",
-    "exportUrl": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRjkI05iwnpbhoPlsB7sinHcQyyK0x-9yQ4oyLMv2k9KgRcQPmdSQ2elsGvjQS0VSBaXl0uUQO9ES8r/pub?output=tsv&gid=794795080"
+    "exportUrl": "https://docs.google.com/spreadsheets/d/1yIAhmYk6GBy04NDqt2WRHVavrAg0UqGrDGD_mOUBFiA/export?format=tsv&gid=794795080"
   }
 }
