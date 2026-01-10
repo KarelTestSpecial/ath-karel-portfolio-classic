@@ -1,1 +1,1 @@
-https://kareltestspecial.github.io/karel-portfolio-classic
+https://athena-cms-factory.github.io/karel-portfolio-classic
