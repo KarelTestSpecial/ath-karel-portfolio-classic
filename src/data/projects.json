@@ -136,33 +136,6 @@
   },
   {
     "type": "github",
-    "name": "Multi File Rename",
-    "githubLink": "https://github.com/KarelTestSpecial/Gdrive-FileRename",
-    "liveLink": "",
-    "status": "",
-    "description": "Rename multiple files in your Google Drive at once. Two main functionalities: removing prefixes from filenames and renaming multiple files in a sequential order.",
-    "image_url": ""
-  },
-  {
-    "type": "github",
-    "name": "DocLog One",
-    "githubLink": "https://github.com/KarelTestSpecial/Gmail-doclog-one",
-    "liveLink": "",
-    "status": "",
-    "description": "Gmail DocLog One is a Google Workspace add-on for Gmail that helps you automatically log information about email attachments and links into a Google Sheet.",
-    "image_url": ""
-  },
-  {
-    "type": "github",
-    "name": "OCR combi",
-    "githubLink": "https://github.com/KarelTestSpecial/ocr-combi-addon",
-    "liveLink": "",
-    "status": "",
-    "description": "A Google Workspace Add-on for Google Drive that streamlines the process of text recognition (OCR) and document merging.",
-    "image_url": ""
-  },
-  {
-    "type": "github",
     "name": "Linux Partitie Analyser",
     "githubLink": "https://github.com/KarelTestSpecial/linuxanalyser",
     "liveLink": "",
@@ -181,42 +154,6 @@
   },
   {
     "type": "github",
-    "name": "Custom Data Tree",
-    "githubLink": "https://github.com/KarelTestSpecial/custom-data-tree/",
-    "liveLink": "https://kareltestspecial.github.io/custom-data-tree/index.html",
-    "status": "inactive",
-    "description": "Build your own datatree.",
-    "image_url": ""
-  },
-  {
-    "type": "github",
-    "name": "Gmail-to-Markdown",
-    "githubLink": "https://github.com/KarelTestSpecial/Gmail-to-Sheet/tree/feat-gmail-addon-email-to-md",
-    "liveLink": "",
-    "status": "",
-    "description": "This Gmail Add-on allows you to select all emails with a specific label, convert them sequentially into a single Markdown file, and save that file to your Google Drive.",
-    "image_url": ""
-  },
-  {
-    "type": "github",
-    "name": "Gmail-to-Sheets",
-    "githubLink": "https://github.com/KarelTestSpecial/Gmail-to-Sheet",
-    "liveLink": "",
-    "status": "",
-    "description": "This Gmail Add-on allows you to select emails with a specific label and export key data (sender, date, time, subject, and plain text body) to a new Google Sheet file in your Google Drive.",
-    "image_url": ""
-  },
-  {
-    "type": "github",
-    "name": "Google Drive Add-ons",
-    "githubLink": "https://github.com/KarelTestSpecial/variaGDriveAddons",
-    "liveLink": "",
-    "status": "",
-    "description": "Map Info Viewer, Footnote Remover",
-    "image_url": ""
-  },
-  {
-    "type": "github",
     "name": "Longevity Food Health data tree",
     "githubLink": "https://github.com/KarelTestSpecial/LFH/",
     "liveLink": "https://kareltestspecial.github.io/LFH/index.html",
@@ -231,6 +168,6 @@
     "liveLink": "https://kanbanpro-frontend.onrender.com/",
     "status": "inactive",
     "description": "Basic showcase van mijn architecturale full-stack vaardigheden. Stack: Java (Spring Boot), React (TypeScript), PostgreSQL & Docker.",
-    "image_url": ""
+    "image_url": "kanban-2-1767998204983.jpeg"
   }
 ]
